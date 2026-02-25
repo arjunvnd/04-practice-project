@@ -1,0 +1,12 @@
+name: Issue printer
+on: [issues, workflow_dispatch]
+
+jobs:
+  log-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log the issue
+        run: echo ${{ toJson(github) }}
+      
+  
+
